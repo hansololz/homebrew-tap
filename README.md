@@ -5,13 +5,20 @@ Homebrew casks for [Autowright](https://autowright.ai).
 ## Install
 
 ```sh
-brew install --cask hansololz/tap/autowright
+brew tap hansololz/tap
+brew trust --tap hansololz/tap
+brew install --cask autowright
 ```
 
-That taps this repository and installs in one step. Once tapped, the short form works too:
+Homebrew 6 refuses to load casks from a third-party tap until you trust it, so the `brew trust`
+line is required; without it the install stops with `Refusing to load cask ... from untrusted
+tap`. Trust is recorded once, in `~/.homebrew/trust.json`, and applies to future upgrades too.
+
+Once the tap is added, `autowright` resolves without the tap prefix, as above. The fully
+qualified form works anywhere and taps the repository implicitly:
 
 ```sh
-brew install --cask autowright
+brew install --cask hansololz/tap/autowright
 ```
 
 ## Upgrade
