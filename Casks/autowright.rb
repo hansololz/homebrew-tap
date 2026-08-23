@@ -9,7 +9,7 @@ cask "autowright" do
   homepage "https://autowright.ai/"
 
   livecheck do
-    url "https://autowright.ai/updates/darwin-arm64.json"
+    url "https://raw.githubusercontent.com/hansololz/autowright/main/release/darwin-arm64/feed.json"
     strategy :json do |json|
       json["currentRelease"]
     end
