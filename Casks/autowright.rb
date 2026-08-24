@@ -9,9 +9,9 @@ cask "autowright" do
   homepage "https://autowright.ai/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hansololz/autowright/main/release/darwin-arm64/feed.json"
-    strategy :json do |json|
-      json["currentRelease"]
+    url "https://raw.githubusercontent.com/hansololz/autowright/main/release/darwin-arm64/latest-mac.yml"
+    strategy :yaml do |yaml|
+      yaml["version"]
     end
   end
 
@@ -36,6 +36,7 @@ cask "autowright" do
   zap trash: [
     "~/.local/bin/autowright",
     "~/Library/Application Support/Autowright",
+    "~/Library/Caches/autowright-updater",
     "~/Library/LaunchAgents/ai.autowright.backend.plist",
     "~/Library/LaunchAgents/com.autowright.backend.plist",
     "~/Library/Logs/Autowright",
