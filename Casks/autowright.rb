@@ -1,6 +1,6 @@
 cask "autowright" do
-  version "0.10.2"
-  sha256 "875ca36f45de72c513c4f972a902e42ba259f996b5695cb3769ac31c3be3d62c"
+  version "0.11.0"
+  sha256 "88a29fa237c2e73b0e29a86d58b86e9d9fef136d70031bad49747b246467c597"
 
   url "https://github.com/hansololz/autowright/releases/download/v#{version}/Autowright-#{version}-darwin-arm64.dmg",
       verified: "github.com/hansololz/autowright/"
